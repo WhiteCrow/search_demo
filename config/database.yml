@@ -7,14 +7,6 @@ development:
   password: root
   min_messages: warning
 
-production:
-  adapter: postgresql
-  database: search_demo_pro
-  pool: 5
-  username: postgres
-  password: root
-  min_messages: warning
-
 test:
   host: localhost
   adapter: postgresql

@@ -1,10 +1,14 @@
 source 'https://rubygems.org'
+ruby "2.0.0"
 
 gem 'rails', '3.2.13'
 #front-end template
 gem 'slim-rails'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass-rails'
+
+#heroku gem
+gem 'rails_12factor', group: :production
 
 #get SNS API
 
