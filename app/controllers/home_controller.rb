@@ -1,7 +1,8 @@
 class HomeController < ApplicationController
   def index
   end
+
   def search
-    binding.pry
+    redirect_to action: :index
   end
 end

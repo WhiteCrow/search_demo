@@ -6,6 +6,8 @@ gem 'slim-rails'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass-rails'
 
+#get SNS API
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
