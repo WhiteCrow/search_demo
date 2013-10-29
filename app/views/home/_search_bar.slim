@@ -5,7 +5,7 @@ form method = "get" action = "/search"
     input#appendedInputButton.span4 type="text" name="q"
     button.btn type="submit"
       i.icon-search
-#auth-links
-  = link_to '#', id: 'login-facebook-link', class: 'btn' do
+/#auth-links
+  = link_to '/auth/facebook/callback', id: 'login-facebook-link', class: 'btn' do
     i.icon-facebook
     | &nbsp; Login use Facebook

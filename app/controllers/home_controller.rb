@@ -11,6 +11,6 @@ class HomeController < ApplicationController
     #client = FBGraph::Client.new(:client_id => '169657853232002',
     #                             :secret_id =>'50e4c34644fff3cad51d8bc0e5255b37')
     #result = client.search.query('facebook').on('page').info!
-    @results = params[:q].blank? ? [] : Search.with_twitter_tweets(params[:q])
+    #@results = params[:q].blank? ? [] : Search.with_twitter_tweets(params[:q])
   end
 end
