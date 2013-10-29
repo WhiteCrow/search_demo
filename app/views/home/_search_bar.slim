@@ -21,8 +21,12 @@ javascript:
     $("#search-notice").html('')
   });
   $('#search-button').click(function(){
-    $("#search-notice").html('Searching....Please wait...')
-    $("#search-results").html('')
-    $.getJSON('/search',{q : $('#appended-input-button').val()},function(){});
+    if($('#appended-input-button').val()){
+      $("#search-notice").html('Searching....Please wait...')
+      $("#search-results").html('')
+      $.getJSON('/search',{q : $('#appended-input-button').val()},function(){});
+    }else{
+      $("#search-notice").html('Please not input blank string.')
+    }
   });
 
