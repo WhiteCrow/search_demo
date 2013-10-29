@@ -5,6 +5,8 @@
     input#appended-input-button.span4 type="text" name="q"
     button#search-button.btn type="button"
       i.icon-search
+hr
+p#search-notice
 #search-results
 
 javascript:
@@ -16,8 +18,10 @@ javascript:
       console.log(result);
       $("#search-results").prepend(window.Result.to_html(result));
     }
+    $("#search-notice").html('')
   });
   $('#search-button').click(function(){
+    $("#search-notice").html('Searching....Please wait...')
     $("#search-results").html('')
     $.getJSON('/search',{q : $('#appended-input-button').val()},function(){});
   });

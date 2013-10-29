@@ -4,7 +4,7 @@ Faye::WebSocket.load_adapter('thin')
 
 FAYE_TOKEN = "4a0af78efe567"
 
-app = Faye::RackAdapter.new(:mount => '/faye', :timeout => 25)
+app = Faye::RackAdapter.new(:mount => '/faye', :timeout => 5)
 class FayeAuth
   def incoming(message, callback)
     if message['channel'] !~ %r{^/meta/}
