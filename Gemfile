@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://ruby.taobao.org'
 ruby "2.0.0"
 
 gem 'rails', '3.2.13'
@@ -10,12 +10,20 @@ gem 'font-awesome-sass-rails'
 #heroku gem
 gem 'rails_12factor', group: :production
 
-#get SNS API
+# get SNS API
+gem 'twitter'
+#gem 'linkedin'
+#gem 'fbgraph'
+#gem 'httparty'
+gem 'omniauth'
+gem 'omniauth-facebook'
+#gem 'omniauth-twitter'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
+gem 'jquery-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -29,4 +37,6 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+group :development, :test do
+  gem 'pry-rails'
+end

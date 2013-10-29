@@ -1,0 +1,10 @@
+= render 'search_bar'
+hr
+- @results.each do |result|
+  .box
+    .box-title
+      = image_tag result[:image_url], class: "img-circle pull-left"
+      h4
+        = result[:name]
+    .box-content
+      = result[:text]

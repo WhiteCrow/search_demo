@@ -1,0 +1,11 @@
+= link_to root_path do
+  h2 Search in SNS
+form method = "get" action = "/search"
+  .input-append
+    input#appendedInputButton.span4 type="text" name="q"
+    button.btn type="submit"
+      i.icon-search
+#auth-links
+  = link_to '#', id: 'login-facebook-link', class: 'btn' do
+    i.icon-facebook
+    | &nbsp; Login use Facebook
