@@ -7,11 +7,11 @@ class SearchJob
     d.join
   end
 
-  def facebook(kw)
+  def self.facebook(kw)
     kw
   end
 
-  def twitter(kw)
+  def self.twitter(kw)
     kw
   end
 end

@@ -17,7 +17,7 @@ gem 'rails_12factor', group: :production
 # get SNS API
 gem 'twitter'
 #gem 'linkedin'
-gem 'fbgraph'
+#gem 'fbgraph'
 #gem 'httparty'
 #gem 'omniauth'
 #gem 'omniauth-facebook'
