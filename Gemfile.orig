@@ -17,12 +17,17 @@ gem 'rails_12factor', group: :production
 # get SNS API
 gem 'twitter'
 #gem 'linkedin'
+<<<<<<< HEAD
 gem 'fbgraph'
 #gem 'httparty'
-#gem 'omniauth'
-#gem 'omniauth-facebook'
+gem 'omniauth'
+gem 'omniauth-facebook'
 gem 'rails_config'
 #gem 'omniauth-twitter'
+=======
+#gem 'fbgraph'
+gem 'httparty'
+>>>>>>> 1d58390c6e12e6c64e787ad91f23c4fbf051540e
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
