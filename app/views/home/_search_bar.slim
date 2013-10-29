@@ -3,9 +3,20 @@
 form method = "get" action = "/search"
   .input-append
     input#appendedInputButton.span4 type="text" name="q"
-    button.btn type="submit"
+    button#searchButton.btn type="button"
       i.icon-search
 /#auth-links
   = link_to '/auth/facebook/callback', id: 'login-facebook-link', class: 'btn' do
     i.icon-facebook
     | &nbsp; Login use Facebook
+
+javascript:
+  faye = new Faye.Client("http://abc.com:8081/faye");
+  faye.subscribe("/search/#{request.session_options[:id]}",
+    function(json) {
+    console.log(json);
+  });
+  $('#searchButton').click(function(){
+    $.getJSON('/search',{q : $('#appendedInputButton').val()},function(){});
+  });
+

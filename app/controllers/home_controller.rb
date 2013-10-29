@@ -3,6 +3,9 @@ class HomeController < ApplicationController
   end
 
   def search
+    kw = params[:q].to_s
+    ::Resque.enqueue(SearchJob,request.session_options[:id],kw)
+    render :inline => 'ok'
     #linkedin_client = OAuth2::Client.new('0ctqnsczmz3a', 'k184ZjS6JhEyq7os', :site => 'https://www.linkedin.com')
     #token = client.auth_code.get_token('31e7f763-fa05-47e9-9302-d067a155d74c',
     #               :redirect_uri => 'http://localhost:8080/oauth2/callback',

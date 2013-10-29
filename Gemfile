@@ -6,7 +6,11 @@ gem 'rails', '3.2.13'
 gem 'slim-rails'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass-rails'
-
+gem 'faye-rails', '1.0.0'
+gem 'thin'
+gem 'hiredis'
+gem 'redis'
+gem "resque", "~> 2.0.0.pre.1", github: "resque/resque"
 #heroku gem
 gem 'rails_12factor', group: :production
 
@@ -17,6 +21,7 @@ gem 'fbgraph'
 #gem 'httparty'
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'rails_config'
 #gem 'omniauth-twitter'
 
 # Bundle edge Rails instead:

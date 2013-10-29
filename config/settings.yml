@@ -1,0 +1,2 @@
+faye_server: "http://localhost:8081/faye"
+faye_token: "4a0af78efe567"
