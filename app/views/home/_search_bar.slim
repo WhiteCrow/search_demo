@@ -1,22 +1,24 @@
 = link_to root_path do
   h2 Search in SNS
-form method = "get" action = "/search"
+#search-form
   .input-append
-    input#appendedInputButton.span4 type="text" name="q"
-    button#searchButton.btn type="button"
+    input#appended-input-button.span4 type="text" name="q"
+    button#search-button.btn type="button"
       i.icon-search
-/#auth-links
-  = link_to '/auth/facebook/callback', id: 'login-facebook-link', class: 'btn' do
-    i.icon-facebook
-    | &nbsp; Login use Facebook
+#search-results
 
 javascript:
-  faye = new Faye.Client("http://abc.com:8081/faye");
-  faye.subscribe("/search/#{request.session_options[:id]}",
-    function(json) {
-    console.log(json);
+  faye = new Faye.Client("http://aqueous-lowlands-8670.herokuapp.com:8081/faye");
+  faye.subscribe("/search/#{request.session_options[:id]}", function(json) {
+    results = json.result
+    for (var i=0; i<results.length; i++){
+      result = results[i]
+      console.log(result);
+      $("#search-results").prepend(window.Result.to_html(result));
+    }
   });
-  $('#searchButton').click(function(){
-    $.getJSON('/search',{q : $('#appendedInputButton').val()},function(){});
+  $('#search-button').click(function(){
+    $("#search-results").html('')
+    $.getJSON('/search',{q : $('#appended-input-button').val()},function(){});
   });
 
